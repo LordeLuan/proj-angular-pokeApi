@@ -1,0 +1,17 @@
+<app-header></app-header>
+
+<!-- Conteudo do componente -->
+<div class="d-flex justify-content-center">
+  <div class="card text-center p-4 mt-4" style="background-color: rgba(255, 255, 0, 0.267); width: 80vw; overflow: hidden;">
+    <h3 class="mb-4" style="text-shadow: 1px 1px 2px red;">HABILIDADES DO POKEMON: {{pokemonMove.name | uppercase}}</h3>
+    <div class="row mb-4">
+      <div *ngFor="let pokemon of pokemonMove.moves; index as i" class="col-lg-4">
+        <span class="badge rounded-pill bg-info">{{i+1}}</span>
+        <span class="badge rounded-pill bg-secondary col-lg-4">{{pokemon.move?.name}}</span>
+        <!-- <span class="text-danger col-lg-2">{{move.move?.url}}</span> <br> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>
